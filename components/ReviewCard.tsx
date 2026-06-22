@@ -1,9 +1,9 @@
 'use client'
 import { useState } from 'react'
 
-const NAVY = '#0D1B35'
-const GOLD = '#F0B429'
-const BLUE = '#1B3498'
+const NAVY = '#15274f'
+const GOLD = '#fdc200'
+const BLUE = '#003cb5'
 const PREVIEW = 165
 
 export default function ReviewCard({ name, text }: { name: string; text: string }) {
@@ -14,7 +14,7 @@ export default function ReviewCard({ name, text }: { name: string; text: string 
 
   return (
     <div style={{
-      background: '#F4F4F4',
+      background: '#fff',
       borderRadius: 8,
       padding: '28px 24px',
       display: 'flex',
@@ -22,7 +22,12 @@ export default function ReviewCard({ name, text }: { name: string; text: string 
       alignItems: 'center',
       textAlign: 'center',
     }}>
-      <div style={{ color: NAVY, fontSize: '2rem', marginBottom: 8, lineHeight: 1 }}>&ldquo;</div>
+      <img
+        src="/images/quote-mark.png"
+        alt=""
+        aria-hidden="true"
+        style={{ width: 36, height: 36, objectFit: 'contain', marginBottom: 12 }}
+      />
       <div style={{ color: GOLD, fontSize: '1rem', letterSpacing: 3, marginBottom: 16 }}>★★★★★</div>
       <p style={{ color: '#444', fontSize: '0.88rem', lineHeight: 1.7, marginBottom: 20, flex: 1 }}>
         {open ? text : short}
@@ -41,11 +46,12 @@ export default function ReviewCard({ name, text }: { name: string; text: string 
           cursor: 'pointer',
           marginBottom: 16,
           fontFamily: 'inherit',
+          textTransform: 'uppercase',
         }}
       >
         {open ? 'READ LESS' : 'READ MORE'}
       </button>
-      <p style={{ color: BLUE, fontWeight: 700, fontSize: '0.9rem' }}>{name}</p>
+      <p style={{ color: NAVY, fontWeight: 700, fontSize: '0.9rem', fontFamily: 'Poppins, sans-serif' }}>{name}</p>
     </div>
   )
 }

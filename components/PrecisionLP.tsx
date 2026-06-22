@@ -199,7 +199,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
               style={{
                 background: '#fff',
                 borderRadius: 12,
-                boxShadow: '10px 10px 30px rgba(0,0,0,0.25)',
+                boxShadow: '10px 10px 10.1px rgba(0,0,0,0.32)',
                 padding: '40px 32px 32px',
                 position: 'relative',
                 zIndex: 2,
@@ -216,7 +216,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
               }}>
                 Request Your Evaluation
               </p>
-              <GhlForm formId={heroFormId} height={360} />
+              <GhlForm formId={heroFormId} height={420} />
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
           <div style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to bottom, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.95) 100%)',
+            background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.97) 100%)',
           }} />
           {/* Patient-Centered Care badge */}
           <div style={{
@@ -519,7 +519,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
       </section>
 
       {/* ── REVIEWS ── */}
-      <section style={{ background: '#fff', padding: '80px 40px', borderTop: '1px solid #f0f0f0' }}>
+      <section style={{ background: GRAY_BG, padding: '80px 40px' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto' }}>
           <h2 style={{
             fontFamily: 'Poppins, sans-serif',
@@ -588,7 +588,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
               As low as
             </p>
             <p style={{
-              fontFamily: '"Poppins", sans-serif',
+              fontFamily: '"Lato", sans-serif',
               fontWeight: 900,
               fontSize: 'clamp(2.5rem, 5vw, 4rem)',
               color: GOLD,
@@ -745,9 +745,9 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
                 marginBottom: 32,
               }}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.1!2d-75.1712!3d39.9497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c63a5e0c8e79%3A0x0!2sPrecision+Hair+Restoration!5e0!3m2!1sen!2sus!4v1"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.5505854044586!2d-75.17372312346834!3d39.94923017152393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c62b17a3cc01%3A0x68dc2e7e14ea04be!2sPrecision%20Hair%20Restoration!5e0!3m2!1sen!2sus!4v1750000000000!5m2!1sen!2sus"
                   width="100%"
-                  height="360"
+                  height="520"
                   style={{ display: 'block', border: 'none' }}
                   allowFullScreen
                   loading="lazy"
@@ -801,10 +801,10 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
             letterSpacing: '0.06em',
             textTransform: 'uppercase',
           }}>
-            &copy; {new Date().getFullYear()} Precision Hair Restoration &nbsp;&bull;&nbsp;
-            <a href="/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy Policy</a>
+            &copy; 2025 HAIR RESTORATION &nbsp;&bull;&nbsp;
+            <a href="https://phillyhairmd.com/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>PRIVACY POLICY</a>
             &nbsp;&bull;&nbsp;
-            <a href="/cookie-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>HIPAA Policy</a>
+            <a href="https://phillyhairmd.com/hipaa-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>HIPAA POLICY</a>
           </p>
         </div>
       </section>
