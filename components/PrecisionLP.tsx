@@ -225,26 +225,28 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
         <div style={{
           position: 'relative',
           minHeight: 500,
+          backgroundColor: '#000',
           backgroundImage: 'url(/images/hero-bg.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center top',
+          backgroundPosition: 'left center',
         }}>
           <div style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.97) 100%)',
+            background: 'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.85) 100%)',
           }} />
-          {/* Patient-Centered Care badge */}
+          {/* Patient-Centered Care badge — bottom-right, below form card */}
           <div style={{
             position: 'absolute',
             bottom: 40,
-            left: 40,
+            right: 40,
             display: 'flex',
             alignItems: 'center',
             gap: 16,
             zIndex: 2,
+            maxWidth: 460,
           }}>
-            <div style={{ color: GOLD, fontSize: '1.4rem', letterSpacing: 3 }}>★★★★★</div>
+            <div style={{ color: GOLD, fontSize: '1.4rem', letterSpacing: 3, whiteSpace: 'nowrap' }}>★★★★★</div>
             <div>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sans-serif', fontWeight: 500, fontSize: '1rem' }}>
                 Patient-Centered Care
@@ -519,7 +521,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
       </section>
 
       {/* ── REVIEWS ── */}
-      <section style={{ background: GRAY_BG, padding: '80px 40px' }}>
+      <section style={{ background: '#fff', padding: '80px 40px' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto' }}>
           <h2 style={{
             fontFamily: 'Poppins, sans-serif',
