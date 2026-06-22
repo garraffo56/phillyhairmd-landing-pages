@@ -289,8 +289,8 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
             ].map((step) => (
               <div key={step.title} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
                 <div style={{
-                  width: 170,
-                  height: 170,
+                  width: 211,
+                  height: 211,
                   borderRadius: '50%',
                   background: BLUE,
                   display: 'flex',
@@ -298,7 +298,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
                   justifyContent: 'center',
                   flexShrink: 0,
                 }}>
-                  <img src={step.icon} alt={step.title} style={{ width: 90, height: 90, objectFit: 'contain' }} />
+                  <img src={step.icon} alt={step.title} style={{ width: 112, height: 112, objectFit: 'contain' }} />
                 </div>
                 <div>
                   <p style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '1rem', marginBottom: 4 }}>{step.title}</p>

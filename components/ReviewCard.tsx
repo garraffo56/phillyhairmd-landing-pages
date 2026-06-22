@@ -26,7 +26,7 @@ export default function ReviewCard({ name, text }: { name: string; text: string 
         src="/images/quote-mark.png"
         alt=""
         aria-hidden="true"
-        style={{ width: 36, height: 36, objectFit: 'contain', marginBottom: 12 }}
+        style={{ width: 52, height: 52, objectFit: 'contain', marginBottom: 12 }}
       />
       <div style={{ color: GOLD, fontSize: '1rem', letterSpacing: 3, marginBottom: 16 }}>★★★★★</div>
       <p style={{ color: '#444', fontSize: '0.88rem', lineHeight: 1.7, marginBottom: 20, flex: 1 }}>
