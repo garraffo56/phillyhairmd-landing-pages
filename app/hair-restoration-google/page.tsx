@@ -17,9 +17,8 @@ export const metadata: Metadata = {
   },
 }
 
-// TODO: Replace with Precision's actual GHL form IDs before launch
-const HERO_FORM_ID = 'PRECISION_HERO_FORM_ID'
-const BOTTOM_FORM_ID = 'PRECISION_BOTTOM_FORM_ID'
+const HERO_FORM_ID = '0CikkitkuxraQeuF59Ia'
+const BOTTOM_FORM_ID = '3EQzlbCsAi3pImhG1pVH'
 
 const PHONE = '(215) 800-9100'
 const PHONE_HREF = 'tel:+12158009100'
