@@ -24,42 +24,85 @@ const faqs = [
 ]
 
 export default function PrecisionFaq() {
-  const [open, setOpen] = useState<number | null>(null)
+  const [openItems, setOpenItems] = useState<Set<number>>(new Set())
+  const allOpen = openItems.size === faqs.length
+
+  const toggleItem = (i: number) => {
+    const next = new Set(openItems)
+    if (next.has(i)) next.delete(i)
+    else next.add(i)
+    setOpenItems(next)
+  }
+
+  const toggleAll = () => {
+    if (allOpen) setOpenItems(new Set())
+    else setOpenItems(new Set(faqs.map((_, i) => i)))
+  }
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-      {faqs.map((item, i) => (
-        <div key={i}>
-          <button
-            onClick={() => setOpen(open === i ? null : i)}
-            aria-expanded={open === i}
-            style={{
-              width: '100%',
-              background: NAVY,
-              border: 'none',
-              borderRadius: 50,
-              padding: '20px 32px',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              cursor: 'pointer',
-              textAlign: 'left',
-              gap: 16,
-            }}
-          >
-            <span style={{ color: '#fff', fontSize: '1rem', fontWeight: 500, fontFamily: 'Poppins, sans-serif', lineHeight: 1.4 }}>
-              {item.q}
-            </span>
-            <span style={{ color: '#fff', fontSize: '1.4rem', fontWeight: 300, flexShrink: 0, lineHeight: 1, minWidth: 20, textAlign: 'center' }}>
-              {open === i ? '−' : '+'}
-            </span>
-          </button>
-          {open === i && (
-            <div style={{ padding: '20px 32px 8px', color: '#444', lineHeight: 1.75, fontSize: '0.95rem' }}>
-              {item.a}
-            </div>
-          )}
-        </div>
-      ))}
+    <div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 40 }}>
+        <h2 style={{
+          fontFamily: 'Poppins, sans-serif',
+          fontWeight: 600,
+          fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)',
+        }}>
+          Frequently Asked Questions
+        </h2>
+        <button
+          onClick={toggleAll}
+          style={{
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            color: BLUE,
+            fontSize: '0.88rem',
+            fontFamily: 'Poppins, sans-serif',
+            textDecoration: 'underline',
+            padding: 0,
+            whiteSpace: 'nowrap',
+            flexShrink: 0,
+            marginLeft: 24,
+          }}
+        >
+          {allOpen ? 'Collapse All' : 'Expand All'}
+        </button>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {faqs.map((item, i) => (
+          <div key={i}>
+            <button
+              onClick={() => toggleItem(i)}
+              aria-expanded={openItems.has(i)}
+              style={{
+                width: '100%',
+                background: NAVY,
+                border: 'none',
+                borderRadius: 50,
+                padding: '20px 32px',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                cursor: 'pointer',
+                textAlign: 'left',
+                gap: 16,
+              }}
+            >
+              <span style={{ color: '#fff', fontSize: '1rem', fontWeight: 500, fontFamily: 'Poppins, sans-serif', lineHeight: 1.4 }}>
+                {item.q}
+              </span>
+              <span style={{ color: '#fff', fontSize: '1.4rem', fontWeight: 300, flexShrink: 0, lineHeight: 1, minWidth: 20, textAlign: 'center' }}>
+                {openItems.has(i) ? '−' : '+'}
+              </span>
+            </button>
+            {openItems.has(i) && (
+              <div style={{ padding: '20px 32px 8px', color: '#444', lineHeight: 1.75, fontSize: '0.95rem' }}>
+                {item.a}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

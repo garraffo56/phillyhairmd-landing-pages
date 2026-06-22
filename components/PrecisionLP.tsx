@@ -377,11 +377,9 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
           <div className="trust-grid">
             {TRUST_ITEMS.map((item) => (
               <div key={item.title} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
-                <img
-                  src="/images/trust-check.png"
-                  alt=""
-                  style={{ width: 40, height: 40, flexShrink: 0, marginTop: 2 }}
-                />
+                <svg aria-hidden="true" viewBox="0 0 56 54" fill="none" style={{ width: 40, height: 40, flexShrink: 0, marginTop: 2, display: 'block' }}>
+                  <path d="M56 26.9997C56 24.1283 52.4574 21.8577 51.6205 19.2665C50.7561 16.5812 52.2681 12.6528 50.6536 10.4164C49.0218 8.1596 44.8353 8.40196 42.5952 6.75892C40.3762 5.13247 39.3197 1.0364 36.6534 0.163734C34.0831 -0.676675 30.8497 1.9837 27.9995 1.9837C25.1494 1.9837 21.9169 -0.676675 19.3466 0.163734C16.6812 1.0364 15.6247 5.13247 13.4066 6.75892C11.1647 8.40288 6.97816 8.1596 5.34636 10.4164C3.73193 12.6519 5.24391 16.5831 4.37953 19.2665C3.54259 21.8577 0 24.1283 0 26.9997C0 29.8711 3.54259 32.1408 4.37953 34.733C5.24391 37.4182 3.73193 41.3466 5.34636 43.5831C6.97816 45.8398 11.1647 45.5975 13.4066 47.2405C15.6247 48.8669 16.6812 52.963 19.3466 53.8357C21.9169 54.6761 25.1521 52.0157 28.0005 52.0157C30.8488 52.0157 34.0841 54.677 36.6543 53.8357C39.3197 52.963 40.3762 48.8669 42.5961 47.2405C44.8362 45.5965 49.0228 45.8398 50.6546 43.5831C52.269 41.3475 50.757 37.4164 51.6214 34.733C52.4574 32.1417 56.0009 29.872 56.0009 26.9997H56ZM42.4297 21.6264L26.4848 37.69C25.7549 38.4254 24.799 38.7922 23.845 38.7922C22.891 38.7922 21.9333 38.4254 21.2034 37.69L13.5703 30.0001C12.1123 28.5312 12.1123 26.151 13.5703 24.6821C15.0283 23.2133 17.3928 23.2133 18.8508 24.6821L23.8441 29.7126L37.1483 16.3075C38.6063 14.8387 40.9717 14.8387 42.4288 16.3075C43.8868 17.7764 43.8868 20.1566 42.4288 21.6255L42.4297 21.6264Z" fill="#164996"/>
+                </svg>
                 <div>
                   <p style={{
                     fontFamily: 'Poppins, sans-serif',
@@ -695,11 +693,12 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
                   <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {section.items.map((item, idx) => (
                       <li key={idx} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                        <img
-                          src="/images/practice-check.png"
-                          alt=""
-                          style={{ width: 18, height: 18, marginTop: 3, flexShrink: 0 }}
-                        />
+                        <svg aria-hidden="true" viewBox="0 0 17 17" fill="none" style={{ width: 18, height: 18, marginTop: 3, flexShrink: 0, display: 'block' }}>
+                          <path d="M17 8.5C17 13.1943 13.1943 17 8.5 17C3.80566 17 0 13.1943 0 8.5C0 3.80566 3.80566 0 8.5 0C13.1943 0 17 3.80566 17 8.5Z" fill="#15274F"/>
+                          <path opacity="0.16" d="M6.3281 12.3344L10.6989 16.7051C14.3187 15.7397 17 12.4417 17 8.5V8.25848L13.5678 5.09472L6.3281 12.3344Z" fill="white"/>
+                          <path d="M8.71455 10.404C9.08972 10.7792 9.08972 11.4228 8.71455 11.7986L7.93724 12.5759C7.56207 12.9511 6.91841 12.9511 6.54266 12.5759L3.13738 9.14365C2.76221 8.76848 2.76221 8.12483 3.13738 7.74965L3.91528 6.97176C4.29045 6.59659 4.9341 6.59659 5.30928 6.97176L8.71455 10.404Z" fill="white"/>
+                          <path d="M11.6907 4.47803C12.0659 4.10286 12.7096 4.10286 13.0853 4.47803L13.8626 5.25593C14.2378 5.6311 14.2378 6.27476 13.8626 6.64993L7.96362 12.522C7.58845 12.8971 6.94479 12.8971 6.56962 12.522L5.79172 11.7447C5.41655 11.3695 5.41655 10.7258 5.79172 10.3501L11.6907 4.47803Z" fill="white"/>
+                        </svg>
                         <span style={{
                           fontFamily: 'sans-serif',
                           fontSize: '0.95rem',
@@ -723,14 +722,6 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
       {/* ── FAQ ── */}
       <section style={{ background: '#fff', padding: '80px 40px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <h2 style={{
-            fontFamily: 'Poppins, sans-serif',
-            fontWeight: 600,
-            fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)',
-            marginBottom: 40,
-          }}>
-            Frequently Asked Questions
-          </h2>
           <PrecisionFaq />
         </div>
       </section>
@@ -741,6 +732,17 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
           <div className="map-form-grid" style={{ alignItems: 'start', paddingBottom: 60 }}>
             {/* Left: map */}
             <div>
+              <p style={{
+                color: '#fff',
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.75rem',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                marginBottom: 12,
+              }}>
+                Visit Our Practice
+              </p>
               <div style={{
                 borderRadius: 12,
                 overflow: 'hidden',
@@ -758,28 +760,38 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
                 />
               </div>
               <div style={{ display: 'flex', gap: 48, flexWrap: 'wrap' }}>
-                <div>
-                  <a
-                    href={PHONE_HREF}
-                    style={{
-                      fontFamily: 'sans-serif',
-                      fontWeight: 700,
-                      fontSize: '1.3rem',
-                      color: '#fff',
-                      textDecoration: 'none',
-                      display: 'block',
-                      marginBottom: 4,
-                    }}
-                  >
-                    {PHONE}
-                  </a>
-                  <p style={{ color: '#fff', fontSize: '0.9rem' }}>Call or text for immediate assistance</p>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="white" style={{ width: 20, height: 20, flexShrink: 0, marginTop: 4, display: 'block' }}>
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                  <div>
+                    <a
+                      href={PHONE_HREF}
+                      style={{
+                        fontFamily: 'sans-serif',
+                        fontWeight: 700,
+                        fontSize: '1.3rem',
+                        color: '#fff',
+                        textDecoration: 'none',
+                        display: 'block',
+                        marginBottom: 4,
+                      }}
+                    >
+                      {PHONE}
+                    </a>
+                    <p style={{ color: '#fff', fontSize: '0.9rem' }}>Call or text for immediate assistance</p>
+                  </div>
                 </div>
-                <div>
-                  <p style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>
-                    {ADDRESS_LINE1}
-                  </p>
-                  <p style={{ color: '#fff', fontSize: '0.9rem' }}>{ADDRESS_LINE2}</p>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="white" style={{ width: 20, height: 20, flexShrink: 0, marginTop: 4, display: 'block' }}>
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  <div>
+                    <p style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>
+                      {ADDRESS_LINE1}
+                    </p>
+                    <p style={{ color: '#fff', fontSize: '0.9rem' }}>{ADDRESS_LINE2}</p>
+                  </div>
                 </div>
               </div>
             </div>
