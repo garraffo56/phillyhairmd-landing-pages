@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import PrecisionLP from '@/components/PrecisionLP'
 
 export const metadata: Metadata = {
-  title: 'Hair Transplant Philadelphia | Precision Hair Restoration',
+  title: 'Hair Loss Evaluation Philadelphia | Precision Hair Restoration',
   robots: 'noindex, nofollow',
 }
 

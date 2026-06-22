@@ -79,12 +79,44 @@ const REVIEWS = [
   },
 ]
 
+interface StepItem { icon: string; title: string; sub: string }
+
+const DEFAULT_STEPS: StepItem[] = [
+  { icon: '/images/step-schedule.png', title: 'Schedule Your Evaluation', sub: 'Pick a time that works best for you.' },
+  { icon: '/images/step-goals.png', title: 'Share Your Goals', sub: 'Tell us what you want to improve.' },
+  { icon: '/images/step-assessment.png', title: 'Hair Loss Assessment', sub: 'Your provider examines thinning patterns.' },
+  { icon: '/images/step-plan-a.png', title: 'Personalized Treatment Plan', sub: 'Get a plan tailored to your needs.' },
+]
+
 interface PrecisionLPProps {
   heroFormId: string
   bottomFormId: string
+  h1?: string
+  subheading?: string
+  bodyText?: string
+  stepsHeading?: string
+  stepsSubheading?: string
+  steps?: StepItem[]
+  trustHeading?: string
+  trustSubheading?: string
+  trustItems?: Array<{ title: string; body: string }>
+  faq?: React.ReactNode
 }
 
-export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPProps) {
+export default function PrecisionLP({
+  heroFormId,
+  bottomFormId,
+  h1 = 'Medical Evaluation for Thinning Hair & Hair Loss Conditions',
+  subheading = 'Discover the cause of hair loss and learn which treatment options fit your goals and hair biology.',
+  bodyText = 'Request your consultation to understand hair loss options and explore what fits your goals.',
+  stepsHeading = 'Your Hair Loss Plan Is Just Three Steps Away',
+  stepsSubheading = "It’s simpler than you think, and it all starts with a conversation.",
+  steps = DEFAULT_STEPS,
+  trustHeading = 'Why Patients Feel Confident Choosing Our Team — and Why You Can Too',
+  trustSubheading = 'Real care. Real support. Real patient-first focus.',
+  trustItems = TRUST_ITEMS,
+  faq,
+}: PrecisionLPProps) {
   return (
     <>
       <Suspense fallback={null}><GclidCapture /></Suspense>
@@ -170,7 +202,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
                 color: '#000',
                 marginBottom: 20,
               }}>
-                Medical Evaluation for Thinning Hair & Hair Loss Conditions
+                {h1}
               </h1>
               <p style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -180,7 +212,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
                 marginBottom: 16,
                 lineHeight: 1.5,
               }}>
-                Discover the cause of hair loss and learn which treatment options fit your goals and hair biology.
+                {subheading}
               </p>
               <p style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -189,7 +221,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
                 color: '#000',
                 lineHeight: 1.5,
               }}>
-                Request your consultation to understand your hair loss and explore your options.
+                {bodyText}
               </p>
             </div>
 
@@ -269,7 +301,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
             textAlign: 'center',
             marginBottom: 12,
           }}>
-            Your Hair Loss Plan Is Just Three Steps Away
+            {stepsHeading}
           </h2>
           <p style={{
             fontFamily: 'Poppins, sans-serif',
@@ -279,16 +311,11 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
             marginBottom: 60,
             color: '#333',
           }}>
-            It&apos;s simpler than you think, and it all starts with a conversation.
+            {stepsSubheading}
           </p>
 
           <div className="steps-grid" style={{ maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
-            {[
-              { icon: '/images/step-schedule.png', title: 'Schedule Your Evaluation', sub: 'Pick a time that works best for you.' },
-              { icon: '/images/step-goals.png', title: 'Share Your Goals', sub: 'Tell us what you want to improve.' },
-              { icon: '/images/step-assessment.png', title: 'Hair Loss Assessment', sub: 'Your provider examines thinning patterns.' },
-              { icon: '/images/step-plan-a.png', title: 'Personalized Treatment Plan', sub: 'Get a plan tailored to your needs.' },
-            ].map((step) => (
+            {steps.map((step) => (
               <div key={step.title} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 211,
@@ -361,7 +388,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
             marginLeft: 'auto',
             marginRight: 'auto',
           }}>
-            Why Patients Feel Confident Choosing Our Team — and Why You Can Too
+            {trustHeading}
           </h2>
           <p style={{
             fontFamily: 'Poppins, sans-serif',
@@ -371,11 +398,11 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
             marginBottom: 56,
             color: '#333',
           }}>
-            Real care. Real support. Real patient-first focus.
+            {trustSubheading}
           </p>
 
           <div className="trust-grid">
-            {TRUST_ITEMS.map((item) => (
+            {trustItems.map((item) => (
               <div key={item.title} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                 <svg aria-hidden="true" viewBox="0 0 56 54" fill="none" style={{ width: 40, height: 40, flexShrink: 0, marginTop: 2, display: 'block' }}>
                   <path d="M56 26.9997C56 24.1283 52.4574 21.8577 51.6205 19.2665C50.7561 16.5812 52.2681 12.6528 50.6536 10.4164C49.0218 8.1596 44.8353 8.40196 42.5952 6.75892C40.3762 5.13247 39.3197 1.0364 36.6534 0.163734C34.0831 -0.676675 30.8497 1.9837 27.9995 1.9837C25.1494 1.9837 21.9169 -0.676675 19.3466 0.163734C16.6812 1.0364 15.6247 5.13247 13.4066 6.75892C11.1647 8.40288 6.97816 8.1596 5.34636 10.4164C3.73193 12.6519 5.24391 16.5831 4.37953 19.2665C3.54259 21.8577 0 24.1283 0 26.9997C0 29.8711 3.54259 32.1408 4.37953 34.733C5.24391 37.4182 3.73193 41.3466 5.34636 43.5831C6.97816 45.8398 11.1647 45.5975 13.4066 47.2405C15.6247 48.8669 16.6812 52.963 19.3466 53.8357C21.9169 54.6761 25.1521 52.0157 28.0005 52.0157C30.8488 52.0157 34.0841 54.677 36.6543 53.8357C39.3197 52.963 40.3762 48.8669 42.5961 47.2405C44.8362 45.5965 49.0228 45.8398 50.6546 43.5831C52.269 41.3475 50.757 37.4164 51.6214 34.733C52.4574 32.1417 56.0009 29.872 56.0009 26.9997H56ZM42.4297 21.6264L26.4848 37.69C25.7549 38.4254 24.799 38.7922 23.845 38.7922C22.891 38.7922 21.9333 38.4254 21.2034 37.69L13.5703 30.0001C12.1123 28.5312 12.1123 26.151 13.5703 24.6821C15.0283 23.2133 17.3928 23.2133 18.8508 24.6821L23.8441 29.7126L37.1483 16.3075C38.6063 14.8387 40.9717 14.8387 42.4288 16.3075C43.8868 17.7764 43.8868 20.1566 42.4288 21.6255L42.4297 21.6264Z" fill="#164996"/>
@@ -602,7 +629,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
                 Fast, simple payment plans
               </p>
               <p style={{
-                fontFamily: 'sans-serif',
+                fontFamily: 'Poppins, sans-serif',
                 fontSize: '0.72rem',
                 color: 'rgba(255,255,255,0.7)',
                 lineHeight: 1.6,
@@ -700,7 +727,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
                           <path d="M11.6907 4.47803C12.0659 4.10286 12.7096 4.10286 13.0853 4.47803L13.8626 5.25593C14.2378 5.6311 14.2378 6.27476 13.8626 6.64993L7.96362 12.522C7.58845 12.8971 6.94479 12.8971 6.56962 12.522L5.79172 11.7447C5.41655 11.3695 5.41655 10.7258 5.79172 10.3501L11.6907 4.47803Z" fill="white"/>
                         </svg>
                         <span style={{
-                          fontFamily: 'sans-serif',
+                          fontFamily: 'Poppins, sans-serif',
                           fontSize: '0.95rem',
                           color: section.dark ? '#555' : '#222',
                           lineHeight: 1.6,
@@ -722,7 +749,7 @@ export default function PrecisionLP({ heroFormId, bottomFormId }: PrecisionLPPro
       {/* ── FAQ ── */}
       <section style={{ background: '#fff', padding: '80px 40px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <PrecisionFaq />
+          {faq ?? <PrecisionFaq />}
         </div>
       </section>
 
