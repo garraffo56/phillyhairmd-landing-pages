@@ -460,9 +460,9 @@ export default function AlmaTedLP({ heroFormId, bottomFormId }: Props) {
               &copy; 2026 Precision Hair Restoration
             </p>
             <p style={{ fontSize: 12, margin: 0 }}>
-              <a href="https://start.phillyhairmd.com/privacy-policy/" style={{ color: '#9CA3AF', textDecoration: 'none' }}>Privacy Policy</a>
+              <a href="/privacy-policy" style={{ color: '#9CA3AF', textDecoration: 'none' }}>Privacy Policy</a>
               {' | '}
-              <a href="https://start.phillyhairmd.com/cookie-policy/" style={{ color: '#9CA3AF', textDecoration: 'none' }}>Cookie Policy</a>
+              <a href="/cookie-policy" style={{ color: '#9CA3AF', textDecoration: 'none' }}>Cookie Policy</a>
             </p>
           </div>
         </div>

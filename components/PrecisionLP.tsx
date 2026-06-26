@@ -953,9 +953,9 @@ export default function PrecisionLP({
             textTransform: 'uppercase',
           }}>
             &copy; 2026 Precision Hair Restoration &nbsp;&bull;&nbsp;
-            <a href="https://phillyhairmd.com/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy Policy</a>
+            <a href="/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy Policy</a>
             &nbsp;&bull;&nbsp;
-            <a href="https://phillyhairmd.com/cookie-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Cookie Policy</a>
+            <a href="/cookie-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Cookie Policy</a>
           </p>
         </div>
       </section>
