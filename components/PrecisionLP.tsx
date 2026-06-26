@@ -5,15 +5,15 @@ import GclidCapture from '@/components/GclidCapture'
 import ReviewCard from '@/components/ReviewCard'
 import PrecisionFaq from '@/components/PrecisionFaq'
 
-const PHONE = '(215) 800-9100'
-const PHONE_HREF = 'tel:+12158009100'
+const PHONE = '(267) 214-5624'
+const PHONE_HREF = 'tel:+12672145624'
 const ADDRESS_LINE1 = '1608 Walnut St, Suite 1701'
 const ADDRESS_LINE2 = 'Philadelphia, PA 19103'
 const LOGO = 'https://phillyhairmd.com/wp-content/uploads/2026/05/Logo-Color-1-1-1.png'
 
-const BLUE = '#003cb5'
+const BLUE = '#164996'
 const NAVY = '#15274f'
-const GOLD = '#fdc200'
+const GOLD = '#fdc700'
 const GRAY_BG = '#eeeeee'
 
 const TRUST_ITEMS = [
@@ -26,12 +26,42 @@ const TRUST_ITEMS = [
   { title: 'Step-by-Step Guidance', body: 'Know what to expect during your evaluation and throughout your care plan.' },
   { title: 'Built for Real-Life Confidence', body: 'Feel prepared and confident in your everyday life again.' },
   { title: 'Support When You Need It Most', body: 'Real guidance through your evaluation, recommendations, and every step of your journey.' },
-  { title: 'Start with a Free Consultation', body: 'Get answers, options, and a personalized plan — no pressure.' },
+  { title: 'Start with a Free Consultation', body: 'Get answers, options, and a personalized plan  -  no pressure.' },
 ]
+
+const CapabilitiesIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="92" height="151" viewBox="0 0 92 151" fill="none" style={{ width: 92, height: 'auto', maxHeight: 100 }}>
+    <g clipPath="url(#cap-icon)">
+      <path fillRule="evenodd" clipRule="evenodd" d="M54.2555 99.6724C55.5987 98.3103 57.7821 98.3103 59.1253 99.66C60.4808 101.01 60.4808 103.198 59.1376 104.554C54.5499 109.207 49.9989 113.891 45.3867 118.52C44.0435 119.876 41.86 119.876 40.5045 118.52L32.8624 110.834C31.5069 109.478 31.5069 107.284 32.8624 105.928C34.2056 104.572 36.3891 104.572 37.7445 105.928L42.9333 111.155L54.2555 99.6724ZM70.3309 109.09C70.3309 95.5861 59.432 84.6402 46 84.6402C32.568 84.6402 21.6691 95.5861 21.6691 109.09C21.6691 122.594 32.5557 133.54 46 133.54C59.4443 133.54 70.3309 122.594 70.3309 109.09ZM80.7944 100.745L87.7067 103.42V114.76L80.7944 117.435C79.9112 121.133 78.4576 124.671 76.4765 127.906L79.4819 134.711L71.4963 142.735L64.7251 139.715C61.5051 141.712 57.9907 143.179 54.2984 144.06L51.6427 151.006H40.3573L37.7016 144.06C34.0093 143.179 30.4949 141.712 27.2749 139.721L20.5037 142.741L12.5181 134.723L15.5357 127.919C13.5424 124.677 12.0827 121.145 11.2056 117.441L4.3056 114.766V103.426L11.2056 100.751C12.0888 97.053 13.5424 93.5153 15.5357 90.2795L12.5181 83.4753L20.5037 75.4569L27.2749 78.4769C30.4949 76.48 34.0093 75.0131 37.7016 74.1318L40.3573 67.1858H51.6427L54.3107 74.1318C57.9907 75.0131 61.5051 76.48 64.7251 78.4769L71.4963 75.4569L79.4819 83.4753L76.4765 90.2795C78.4576 93.5214 79.9112 97.053 80.7944 100.757V100.745Z" fill="#164996"/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M9.2368 91.5861H0C2.47787 68.2643 22.1168 50.095 46 50.095C69.8832 50.095 89.5099 68.2643 92 91.5861H82.7632C82.5056 91.0499 82.2419 90.5199 81.9597 89.9898L85.3331 82.372L72.5819 69.5648L65.0072 72.9484C62.7563 71.7589 60.4195 70.7789 57.9907 70.027L55.016 62.249H36.984L34.0093 70.027C31.5805 70.7789 29.2437 71.7527 26.9928 72.9484L19.4181 69.5648L6.66693 82.372L10.0403 89.9898C9.75813 90.5137 9.50667 91.0437 9.24907 91.58M46 47.0134C58.9168 47.0134 69.3864 36.4865 69.3864 23.5067C69.3864 10.5269 58.9168 0 46 0C33.0832 0 22.6013 10.5207 22.6013 23.5067C22.6013 36.4927 33.0771 47.0134 46 47.0134Z" fill="black"/>
+    </g>
+    <defs><clipPath id="cap-icon"><rect width="92" height="151" fill="white"/></clipPath></defs>
+  </svg>
+)
+
+const SafetyIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="139" height="155" viewBox="0 0 139 155" fill="none" style={{ width: 92, height: 'auto', maxHeight: 100 }}>
+    <g clipPath="url(#saf-icon)">
+      <path fillRule="evenodd" clipRule="evenodd" d="M89.8651 15.9585V0.245417C90.1754 0.381042 90.447 0.574792 90.6862 0.820208L106.429 16.5398C106.674 16.7917 106.862 17.0629 107.011 17.36H91.281C90.4987 17.36 89.8651 16.7335 89.8651 15.9585ZM16.5248 77.0802C15.096 77.0802 13.9388 78.2363 13.9388 79.6635C13.9388 81.0908 15.096 82.2469 16.5248 82.2469H74.5622C75.991 82.2469 77.1482 81.0908 77.1482 79.6635C77.1482 78.2363 75.991 77.0802 74.5622 77.0802H16.5248ZM16.5248 38.3238C15.096 38.3238 13.9388 39.4798 13.9388 40.9071C13.9388 42.3344 15.096 43.4904 16.5248 43.4904H90.725C92.1538 43.4904 93.311 42.3344 93.311 40.9071C93.311 39.4798 92.1538 38.3238 90.725 38.3238H16.5248ZM16.5248 51.2469C15.096 51.2469 13.9388 52.4029 13.9388 53.8302C13.9388 55.2575 15.096 56.4135 16.5248 56.4135H90.725C92.1538 56.4135 93.311 55.2575 93.311 53.8302C93.311 52.4029 92.1538 51.2469 90.725 51.2469H16.5248ZM16.5248 64.1635C15.096 64.1635 13.9388 65.3196 13.9388 66.7469C13.9388 68.1742 15.096 69.3302 16.5248 69.3302H90.725C92.1538 69.3302 93.311 68.1742 93.311 66.7469C93.311 65.3196 92.1538 64.1635 90.725 64.1635H16.5248ZM65.0973 114.539C66.526 114.539 67.6833 113.383 67.6833 111.955C67.6833 110.528 66.526 109.372 65.0973 109.372H16.5248C15.096 109.372 13.9388 110.528 13.9388 111.955C13.9388 113.383 15.096 114.539 16.5248 114.539H65.0973ZM25.2269 22.1779C23.7981 22.1779 22.6408 23.334 22.6408 24.7613C22.6408 26.1885 23.7981 27.3446 25.2269 27.3446H82.0229C83.4517 27.3446 84.609 26.1885 84.609 24.7613C84.609 23.334 83.4517 22.1779 82.0229 22.1779H25.2269ZM65.233 98.3927C66.6618 98.3927 67.8191 97.2367 67.8191 95.8094C67.8191 94.3821 66.6618 93.2261 65.233 93.2261H16.5248C15.096 93.2261 13.9388 94.3821 13.9388 95.8094C13.9388 97.2367 15.096 98.3927 16.5248 98.3927H65.2266H65.233ZM71.2391 118.717C70.5667 124.368 73.6377 129.199 78.8098 131.408L75.338 138.861H2.7994C1.24777 138.861 0 137.601 0 136.058V2.80292C0 1.25938 1.25423 0 2.7994 0H84.693V15.9585C84.693 19.5817 87.6411 22.5267 91.281 22.5267H107.256V68.6004C104.334 68.3163 101.328 69.1106 98.8387 70.9771C93.13 75.246 95.5932 74.3483 88.4816 74.7423C83.0638 75.0458 78.5964 78.7917 77.3551 84.0617C75.7259 90.9979 77.0448 88.7181 71.8468 93.5942C67.9031 97.2948 66.8881 103.049 69.3254 107.874C72.5451 114.229 72.086 111.645 71.2391 118.717Z" fill="black"/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M136.789 97.3595C130.847 91.7924 131.643 93.1551 129.787 85.2372C129.076 82.1953 126.529 80.0705 123.419 79.8961C115.286 79.444 116.766 79.9801 110.25 75.1105C107.741 73.2376 104.431 73.2376 101.942 75.1105C95.4251 79.9865 96.8927 79.444 88.766 79.8961C85.6434 80.0705 83.1091 82.1953 82.3979 85.2372C80.536 93.1551 81.3312 91.7924 75.3962 97.3595C73.1205 99.4972 72.5386 102.752 73.9545 105.542C77.6202 112.801 77.3486 111.251 76.3789 119.324C76.0168 122.424 77.6719 125.292 80.5424 126.519C88.029 129.722 86.82 128.708 91.2745 135.515C92.9878 138.131 96.0975 139.261 99.0844 138.357C106.881 136.006 105.304 136.006 113.107 138.357C116.094 139.261 119.21 138.131 120.917 135.515C125.378 128.708 124.163 129.716 131.649 126.519C134.52 125.292 136.175 122.424 135.8 119.324C134.895 111.762 134.643 112.646 138.237 105.542C139.653 102.752 139.071 99.4972 136.795 97.3595M106.08 125.421C95.451 125.421 86.833 116.812 86.833 106.188C86.833 95.564 95.451 86.9551 106.08 86.9551C116.708 86.9551 125.339 95.5705 125.339 106.188C125.339 116.805 116.721 125.421 106.08 125.421ZM116.857 98.7609C117.827 99.8136 117.749 101.448 116.695 102.403L104.237 113.693C103.241 114.719 101.573 114.713 100.558 113.705L95.3863 108.539C94.3778 107.531 94.3778 105.897 95.3863 104.883C96.3949 103.869 98.037 103.876 99.052 104.883L102.485 108.313L113.217 98.5865C114.271 97.6242 115.9 97.7017 116.851 98.7545M98.0823 143.788L93.033 154.645C92.8197 155.097 92.1861 155.129 91.9404 154.697L87.1562 146.488L77.7947 148.122C77.2969 148.206 76.909 147.709 77.1224 147.25L83.5487 133.455C84.1564 133.804 86.4063 137.524 86.9429 138.35C89.419 142.154 93.7054 144.169 98.0823 143.788ZM135.056 147.25C135.257 147.702 134.882 148.206 134.384 148.122L125.022 146.488L120.238 154.697C119.999 155.129 119.365 155.097 119.146 154.645L114.083 143.788C118.46 144.169 122.747 142.148 125.236 138.35C125.772 137.53 128.022 133.804 128.617 133.455L135.056 147.25Z" fill="#164996"/>
+    </g>
+    <defs><clipPath id="saf-icon"><rect width="139" height="155" fill="white"/></clipPath></defs>
+  </svg>
+)
+
+const PatientFirstIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="155" height="155" viewBox="0 0 155 155" fill="none" style={{ width: 92, height: 'auto', maxHeight: 100 }}>
+    <g clipPath="url(#pat-icon)">
+      <path fillRule="evenodd" clipRule="evenodd" d="M28.6092 137.556C31.1352 113.947 51.0942 95.5665 75.3396 95.5665C86.726 95.5665 97.1636 99.6213 105.298 106.362L103.145 108.386C99.7681 111.557 98.8978 116.509 100.985 120.649L102.719 124.081L102.261 127.9C101.803 131.739 103.465 135.394 106.489 137.562H28.6092V137.556ZM129.484 107.358C123.195 107.358 118.098 112.46 118.098 118.756C118.098 125.051 123.195 130.154 129.484 130.154C135.773 130.154 140.871 125.051 140.871 118.756C140.871 112.46 135.773 107.358 129.484 107.358ZM132.566 95.6844C137.396 99.3004 136.303 98.9008 142.323 99.2414C144.633 99.3724 146.518 100.951 147.042 103.205C148.416 109.087 147.833 108.072 152.231 112.205C153.919 113.79 154.345 116.207 153.304 118.284C150.582 123.675 150.785 122.522 151.505 128.516C151.779 130.815 150.556 132.944 148.422 133.855C142.88 136.233 143.77 135.486 140.471 140.536C139.202 142.475 136.898 143.314 134.68 142.646C128.908 140.897 130.073 140.897 124.295 142.646C122.076 143.314 119.773 142.475 118.503 140.536C115.199 135.486 116.095 136.233 110.553 133.855C108.426 132.944 107.195 130.815 107.47 128.516C108.184 122.522 108.386 123.669 105.664 118.284C104.617 116.214 105.043 113.797 106.737 112.205C111.135 108.072 110.553 109.087 111.927 103.205C112.457 100.945 114.335 99.3659 116.645 99.2414C122.665 98.9073 121.573 99.3069 126.402 95.6844C128.26 94.2957 130.708 94.2957 132.566 95.6844ZM122.888 148.109L119.806 154.731C119.734 154.889 119.583 154.987 119.413 154.993C119.236 155 119.086 154.915 118.994 154.764L115.454 148.666L108.511 149.877C108.341 149.91 108.177 149.845 108.066 149.707C107.961 149.57 107.942 149.393 108.013 149.236L112.136 140.373C114.885 144.578 117.057 148.168 122.881 148.102L122.888 148.109ZM136.08 148.109C141.905 148.168 144.077 144.578 146.826 140.379L150.948 149.242C151.02 149.399 151.001 149.576 150.896 149.714C150.791 149.851 150.628 149.917 150.458 149.884L143.521 148.672L139.981 154.771C139.896 154.921 139.739 155.007 139.562 155C139.385 154.993 139.241 154.895 139.169 154.738L136.087 148.115L136.08 148.109ZM75.3461 44.7078C88.4733 44.7078 99.1137 55.359 99.1137 68.4995C99.1137 81.64 88.4733 92.2912 75.3461 92.2912C62.2189 92.2912 51.5785 81.64 51.5785 68.4995C51.5785 55.359 62.2189 44.7078 75.3461 44.7078Z" fill="black"/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M17.9433 51.3108L21.2677 61.6279C21.3986 62.0406 21.7716 62.3092 22.2035 62.3092L33.0337 62.2895C33.4656 62.2895 33.8321 62.5581 33.9695 62.9708C34.1069 63.3835 33.9629 63.8158 33.6096 64.0713L24.8341 70.4254C24.4808 70.6808 24.3433 71.1132 24.4742 71.5259L27.8378 81.8299C27.9752 82.2426 27.8378 82.675 27.4844 82.9304C27.1311 83.1859 26.6795 83.1859 26.3261 82.9304L17.5769 76.5436C17.2235 76.2881 16.772 76.2881 16.4186 76.5436L7.66934 82.9304C7.32251 83.1859 6.86444 83.1859 6.51761 82.9304C6.16424 82.675 6.02681 82.2426 6.16424 81.8299L9.52783 71.5259C9.66525 71.1132 9.52128 70.6808 9.16791 70.4254L0.405559 64.0648C0.0521857 63.8093 -0.0852372 63.3769 0.0456418 62.9643C0.176521 62.5516 0.549526 62.283 0.981427 62.283L11.8117 62.3026C12.2436 62.3026 12.6166 62.0341 12.7474 61.6214L16.0718 51.3042C16.2027 50.8915 16.5691 50.6229 17.0076 50.6229C17.446 50.6229 17.8059 50.8915 17.9433 51.3042M136.867 48.0355L140.191 58.3526C140.322 58.7653 140.695 59.0339 141.127 59.0339L151.957 59.0142C152.389 59.0142 152.755 59.2828 152.893 59.6955C153.03 60.1082 152.886 60.5405 152.533 60.796L143.757 67.1501C143.404 67.4056 143.267 67.8379 143.397 68.2506L146.768 78.5546C146.898 78.9673 146.761 79.3997 146.408 79.6552C146.054 79.9106 145.603 79.9106 145.256 79.6552L136.507 73.2683C136.153 73.0129 135.702 73.0129 135.348 73.2683L126.599 79.6552C126.246 79.9106 125.794 79.9106 125.441 79.6552C125.087 79.3997 124.95 78.9673 125.087 78.5546L128.451 68.2506C128.588 67.8379 128.451 67.4056 128.091 67.1501L119.316 60.796C118.962 60.5405 118.825 60.1082 118.956 59.6955C119.093 59.2828 119.46 59.0142 119.892 59.0142L130.722 59.0339C131.154 59.0339 131.52 58.7653 131.658 58.3526L134.982 48.0355C135.113 47.6228 135.486 47.3542 135.918 47.3542C136.35 47.3542 136.716 47.6228 136.853 48.0355M77.4082 0.681261L81.7272 14.0707C81.8581 14.4833 82.2311 14.7519 82.663 14.7519L96.7194 14.7257C97.1513 14.7257 97.5178 14.9943 97.6552 15.407C97.7861 15.8197 97.6487 16.252 97.2953 16.5075L85.9088 24.7547C85.5554 25.0101 85.418 25.4425 85.5489 25.8552L89.9203 39.2249C90.0577 39.6376 89.9202 40.0699 89.5669 40.3254C89.2135 40.5809 88.762 40.5809 88.4086 40.3254L77.0548 32.0324C76.7015 31.7769 76.2499 31.7769 75.8966 32.0324L64.5428 40.3254C64.196 40.5809 63.7379 40.5809 63.3911 40.3254C63.0377 40.0699 62.9003 39.6376 63.0312 39.2249L67.4025 25.8552C67.5399 25.4425 67.4025 25.0101 67.0426 24.7547L55.6561 16.5075C55.3028 16.252 55.1653 15.8197 55.2962 15.407C55.4271 14.9943 55.8001 14.7257 56.232 14.7257L70.2884 14.7519C70.7203 14.7519 71.0933 14.4833 71.2242 14.0707L75.5432 0.681261C75.6741 0.268574 76.0405 0 76.479 0C76.9174 0 77.2773 0.268574 77.4148 0.681261" fill="#164996"/>
+    </g>
+    <defs><clipPath id="pat-icon"><rect width="155" height="155" fill="white"/></clipPath></defs>
+  </svg>
+)
 
 const PRACTICE_SECTIONS = [
   {
-    icon: '/images/icon-capabilities.png',
+    icon: <CapabilitiesIcon />,
     heading: 'Capabilities',
     items: [
       { bold: 'Comprehensive evaluation', rest: ' of hair loss patterns' },
@@ -42,8 +72,8 @@ const PRACTICE_SECTIONS = [
     dark: false,
   },
   {
-    icon: '/images/icon-safety.png',
-    heading: 'Safety Standards',
+    icon: <SafetyIcon />,
+    heading: 'Safety & Surgical Standards',
     items: [
       { bold: 'Evidence-based approaches', rest: ' reviewed by licensed medical providers' },
       { bold: 'Clean, professional clinical environment', rest: ' with medical-grade protocols' },
@@ -52,10 +82,10 @@ const PRACTICE_SECTIONS = [
     dark: true,
   },
   {
-    icon: '/images/icon-patient-first.png',
+    icon: <PatientFirstIcon />,
     heading: 'Patient-First Philosophy',
     items: [
-      { bold: 'Honest assessments —', rest: ' we provide recommendations only when appropriate' },
+      { bold: 'Honest assessments -', rest: ' we provide recommendations only when appropriate' },
       { bold: 'Personalized plans', rest: ' developed around your unique needs and goals' },
       { bold: 'Direct communication with your doctor', rest: ' at every step of your care journey' },
       { bold: '', rest: 'Focus on ', boldAfter: 'long-term hair health' },
@@ -67,11 +97,11 @@ const PRACTICE_SECTIONS = [
 const REVIEWS = [
   {
     name: 'Michael T.',
-    text: "I was nervous going in, but Dr. Barsoumian took the time to explain exactly what was happening with my hair loss and what options made sense for me. No pressure at all — just honest answers. I finally feel like I understand what I'm dealing with and have a clear plan moving forward.",
+    text: "I was nervous going in, but Dr. Barsoumian took the time to explain exactly what was happening with my hair loss and what options made sense for me. No pressure at all  -  just honest answers. I finally feel like I understand what I'm dealing with and have a clear plan moving forward.",
   },
   {
     name: 'David R.',
-    text: "The evaluation process was thorough and professional. I appreciated that they didn't push any particular treatment — they laid out the options and let me decide. The whole team was welcoming from the moment I walked in. I've already recommended Precision to two friends.",
+    text: "The evaluation process was thorough and professional. I appreciated that they didn't push any particular treatment  -  they laid out the options and let me decide. The whole team was welcoming from the moment I walked in. I've already recommended Precision to two friends.",
   },
   {
     name: 'James L.',
@@ -133,22 +163,13 @@ const StepIconPlan = () => (
   </svg>
 )
 
-const PracticeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 54" fill="none" style={{ width: 80, height: 80 }}>
-    <g clipPath="url(#prac-icon)">
-      <path d="M56 26.9997C56 24.1283 52.4574 21.8577 51.6205 19.2665C50.7561 16.5812 52.2681 12.6529 50.6536 10.4164C49.0218 8.15961 44.8353 8.40196 42.5952 6.75893C40.3762 5.13248 39.3197 1.0364 36.6534 0.163738C34.0831 -0.676671 30.8497 1.9837 27.9995 1.9837C25.1494 1.9837 21.9169 -0.676671 19.3466 0.163738C16.6812 1.0364 15.6247 5.13248 13.4066 6.75893C11.1647 8.40289 6.97816 8.15961 5.34636 10.4164C3.73193 12.6519 5.24391 16.5831 4.37953 19.2665C3.54259 21.8577 0 24.1283 0 26.9997C0 29.8711 3.54259 32.1408 4.37953 34.733C5.24391 37.4182 3.73193 41.3466 5.34636 43.5831C6.97816 45.8398 11.1647 45.5975 13.4066 47.2405C15.6247 48.867 16.6812 52.963 19.3466 53.8357C21.9169 54.6761 25.1521 52.0157 28.0005 52.0157C30.8488 52.0157 34.0841 54.677 36.6543 53.8357C39.3197 52.963 40.3762 48.867 42.5961 47.2405C44.8362 45.5965 49.0228 45.8398 50.6546 43.5831C52.269 41.3475 50.757 37.4164 51.6214 34.733C52.4574 32.1417 56.0009 29.872 56.0009 26.9997H56ZM42.4297 21.6264L26.4848 37.6901C25.7549 38.4254 24.799 38.7922 23.845 38.7922C22.891 38.7922 21.9333 38.4254 21.2034 37.6901L13.5703 30.0001C12.1123 28.5312 12.1123 26.151 13.5703 24.6821C15.0283 23.2133 17.3928 23.2133 18.8508 24.6821L23.8441 29.7126L37.1483 16.3075C38.6063 14.8387 40.9717 14.8387 42.4288 16.3075C43.8868 17.7764 43.8868 20.1566 42.4288 21.6255L42.4297 21.6264Z" fill="#164996"/>
-    </g>
-    <defs><clipPath id="prac-icon"><rect width="56" height="54" fill="white"/></clipPath></defs>
-  </svg>
-)
-
 interface StepItem { icon: React.ReactNode; title: string; sub: string }
 
 const DEFAULT_STEPS: StepItem[] = [
   { icon: <StepIconSchedule />, title: 'Schedule Your Evaluation', sub: 'Pick a time that works best for you.' },
   { icon: <StepIconGoals />, title: 'Share Your Goals', sub: 'Tell us what you want to improve.' },
   { icon: <StepIconAssessment />, title: 'Hair Loss Assessment', sub: 'Your provider examines thinning patterns.' },
-  { icon: <StepIconPlan />, title: 'Personalized Treatment Plan', sub: 'Get a plan tailored to your needs.' },
+  { icon: <StepIconPlan />, title: 'Personalized Assessment', sub: 'Get a plan tailored to your needs.' },
 ]
 
 interface PrecisionLPProps {
@@ -170,12 +191,12 @@ export default function PrecisionLP({
   heroFormId,
   bottomFormId,
   h1 = 'Medical Evaluation for Thinning Hair & Hair Loss Conditions',
-  subheading = 'Discover the cause of hair loss and learn which treatment options fit your goals and hair biology.',
-  bodyText = 'Request your consultation to understand hair loss options and explore what fits your goals.',
-  stepsHeading = 'Your Hair Loss Plan Is Just Four Steps Away',
-  stepsSubheading = "It’s simpler than you think, and it all starts with a conversation.",
+  subheading = 'Discover the cause of your hair loss and learn which treatment options fit your goals and hair biology.',
+  bodyText = 'Request your consultation to understand your hair loss and explore your options.',
+  stepsHeading = 'Your Hair Loss Plan Is Just Three Steps Away',
+  stepsSubheading = "It's simpler than you think, and it all starts with a conversation.",
   steps = DEFAULT_STEPS,
-  trustHeading = 'Why Patients Feel Confident Choosing Our Team — and Why You Can Too',
+  trustHeading = 'Why Patients Feel Confident Choosing Our Team - and Why You Can Too',
   trustSubheading = 'Real care. Real support. Real patient-first focus.',
   trustItems = TRUST_ITEMS,
   faq,
@@ -288,7 +309,7 @@ export default function PrecisionLP({
               </p>
             </div>
 
-            {/* Right: form card — starts in gray, extends into dark */}
+            {/* Right: form card  -  starts in gray, extends into dark */}
             <div
               id="evaluation-form"
               style={{
@@ -309,9 +330,9 @@ export default function PrecisionLP({
                 marginBottom: 24,
                 color: '#000',
               }}>
-                Request Your Evaluation
+                Request Your Hair Consultation
               </p>
-              <GhlForm formId={heroFormId} height={420} />
+              <GhlForm formId={heroFormId} height={408} formName="Request Your Hair Consultation - Hair Restoration Google" />
             </div>
           </div>
         </div>
@@ -321,7 +342,7 @@ export default function PrecisionLP({
           position: 'relative',
           minHeight: 500,
           backgroundColor: '#000',
-          backgroundImage: 'url(/images/hero-bg.jpg)',
+          backgroundImage: 'url(https://start.phillyhairmd.com/wp-content/uploads/2025/12/Gemini_Generated_Image_njainnnjainnnjai-2-2.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'left center',
         }}>
@@ -330,7 +351,7 @@ export default function PrecisionLP({
             inset: 0,
             background: 'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.85) 100%)',
           }} />
-          {/* Patient-Centered Care badge — bottom-right, below form card */}
+          {/* Patient-Centered Care badge  -  bottom-right, below form card */}
           <div style={{
             position: 'absolute',
             bottom: 40,
@@ -411,7 +432,7 @@ export default function PrecisionLP({
               No pressure. No obligation. Just honest answers about your options.
             </h3>
             <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', color: '#333', marginBottom: 24 }}>
-              You&apos;re in the right place — thousands start here every week.
+              You&apos;re in the right place  -  thousands start here every week.
             </p>
             <a
               href="#evaluation-form"
@@ -542,7 +563,7 @@ export default function PrecisionLP({
             <div style={{ borderRadius: 8, overflow: 'hidden' }}>
               <img
                 src="/images/doctor-raffi.jpg"
-                alt="Dr. Raffi Barsoumian — Hair Restoration Surgeon"
+                alt="Dr. Raffi Barsoumian  -  Hair Restoration Surgeon"
                 style={{ width: '100%', height: 480, objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
               />
             </div>
@@ -573,7 +594,37 @@ export default function PrecisionLP({
                 color: '#444',
                 marginBottom: 16,
               }}>
-                Dr. Raffi Barsoumian is a double fellowship-trained hair restoration surgeon at Precision Hair Restoration in Philadelphia, PA. With over a decade of experience and more than one million hair follicles transplanted, Dr. Barsoumian brings exceptional expertise to every patient evaluation.
+                Dr. Raffi Barsoumian is a licensed physician with advanced fellowship training and decades of experience in clinical evaluation, diagnosis, and patient care. His medical background includes dual fellowship training in complex surgical disciplines, providing him with a strong foundation in anatomy, wound healing, and comprehensive patient assessment.
+              </p>
+              <p style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 400,
+                fontSize: '0.95rem',
+                lineHeight: 1.75,
+                color: '#444',
+                marginBottom: 16,
+              }}>
+                Dr. Barsoumian completed fellowship training at the Nassau County Firefighters Burn Center at Nassau University Medical Center, where he focused on advanced burn care and reconstructive principles. Prior to this, he completed a fellowship in minimally invasive surgical disciplines at North Shore Long Island Jewish Health System. His early postgraduate training began in General Surgery through the SUNY at Buffalo Graduate Medical Education Consortium.
+              </p>
+              <p style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 400,
+                fontSize: '0.95rem',
+                lineHeight: 1.75,
+                color: '#444',
+                marginBottom: 16,
+              }}>
+                He earned his medical degree from St. George&apos;s University School of Medicine and simultaneously completed both a Bachelor of Science in Biology and a Master&apos;s degree in Speech and Hearing Sciences at the University of Illinois at Urbana-Champaign, graduating in the top percentile of his class. His academic achievements are recognized on the University&apos;s Bronze Tablet.
+              </p>
+              <p style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 400,
+                fontSize: '0.95rem',
+                lineHeight: 1.75,
+                color: '#444',
+                marginBottom: 16,
+              }}>
+                In addition to his clinical work, Dr. Barsoumian has contributed to published medical research across multiple fields and has participated in humanitarian medical outreach efforts internationally, providing care in underserved communities.
               </p>
               <p style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -583,7 +634,7 @@ export default function PrecisionLP({
                 color: '#444',
                 marginBottom: 32,
               }}>
-                His patient-first approach means every consultation begins with a thorough assessment of your hair loss pattern, health history, and goals — so the options you&apos;re presented with are genuinely appropriate for your situation.
+                At the practice, Dr. Barsoumian focuses on the evaluation of hair loss conditions and works with patients to better understand contributing factors such as medical history, hair loss patterns, and individual goals. His approach emphasizes education, transparency, and thoughtful care planning to support informed decision-making.
               </p>
               <a
                 href="#evaluation-form"
@@ -766,7 +817,7 @@ export default function PrecisionLP({
                 padding: '40px 0',
                 borderBottom: '1px solid #f0f0f0',
               }}>
-                <PracticeIcon />
+                {section.icon}
                 <div>
                   <h3 style={{
                     fontFamily: 'Poppins, sans-serif',
@@ -884,7 +935,7 @@ export default function PrecisionLP({
 
             {/* Right: bottom form */}
             <div>
-              <GhlForm formId={bottomFormId} height={580} />
+              <GhlForm formId={bottomFormId} height={400} formName="Footer Form - Hair Restoration Google" />
             </div>
           </div>
         </div>
@@ -901,10 +952,10 @@ export default function PrecisionLP({
             letterSpacing: '0.06em',
             textTransform: 'uppercase',
           }}>
-            &copy; 2025 HAIR RESTORATION &nbsp;&bull;&nbsp;
-            <a href="https://phillyhairmd.com/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>PRIVACY POLICY</a>
+            &copy; 2026 Precision Hair Restoration &nbsp;&bull;&nbsp;
+            <a href="https://phillyhairmd.com/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy Policy</a>
             &nbsp;&bull;&nbsp;
-            <a href="https://phillyhairmd.com/hipaa-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>HIPAA POLICY</a>
+            <a href="https://phillyhairmd.com/cookie-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Cookie Policy</a>
           </p>
         </div>
       </section>

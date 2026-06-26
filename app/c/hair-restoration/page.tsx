@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function CHairRestoration() {
   return (
     <PrecisionLP
-      heroFormId="xHpRUL9ViULqKcwAgckV"
-      bottomFormId="6PBH2eQkP90TeZSMlfcb"
+      heroFormId="0CikkitkuxraQeuF59Ia"
+      bottomFormId="3EQzlbCsAi3pImhG1pVH"
     />
   )
 }
