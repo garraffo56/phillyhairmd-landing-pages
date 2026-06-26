@@ -562,7 +562,7 @@ export default function PrecisionLP({
           <div className="two-col">
             <div style={{ borderRadius: 8, overflow: 'hidden' }}>
               <img
-                src="/images/doctor-raffi.jpg"
+                src="https://start.phillyhairmd.com/wp-content/uploads/2026/02/Rectangle-43-1.png"
                 alt="Dr. Raffi Barsoumian  -  Hair Restoration Surgeon"
                 style={{ width: '100%', height: 480, objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
               />
